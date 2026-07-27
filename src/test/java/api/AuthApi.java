@@ -1,6 +1,7 @@
 package api;
 
 import data.User;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
@@ -20,6 +21,7 @@ public class AuthApi {
         RestAssured.baseURI = BASE_URL;
     }
 
+    @Step("Регистрация пользователя")
     public static Response registerUser(User user) {
         return given()
                 .header("Content-type", "application/json")
@@ -28,6 +30,7 @@ public class AuthApi {
                 .post(REGISTER_ENDPOINT);
     }
 
+    @Step("Авторизация пользователя")
     public static Response loginUser(User user) {
         return given()
                 .header("Content-type", "application/json")
@@ -36,6 +39,7 @@ public class AuthApi {
                 .post(LOGIN_ENDPOINT);
     }
 
+    @Step("Удаление пользователя")
     public static void deleteUser(String accessToken) {
         given()
                 .header("Authorization", accessToken)
