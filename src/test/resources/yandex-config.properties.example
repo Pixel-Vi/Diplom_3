@@ -1,0 +1,8 @@
+# Конфигурация для Яндекс.Браузера
+# Скопируйте этот файл в yandex-config.properties и укажите свои пути
+
+# Путь к yandexdriver.exe (без пробелов в пути рекомендуется)
+yandex.driver.path=/path/to/yandexdriver.exe
+
+# Путь к исполняемому файлу Яндекс.Браузера
+yandex.binary.path=/path/to/YandexBrowser/Application/browser.exe
